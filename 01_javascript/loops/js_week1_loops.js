@@ -12,16 +12,14 @@ for (var i = 1; i <= 10; i++) {
 
 // your top choices
 // var myArr = ['blue', 'green', 'red', 'yellow', 'purple', 'black', 'white', 'indigo', 'teal', 'orange', 'pink', 'crimson'];
-var myArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
+var myArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45]
 for (var i = 1; i <= myArr.length; i++) {
-	var number = i.toString();
-	// get the last number as a string
-	number = number[number.length - 1]
-	if (number === '1' && i !== 11) {
+	var remainder = i % 10;
+	if (remainder === 1 && i !== 11) {
 		console.log('My ' + i + 'st' + ' choice is ' + myArr[i-1]);
-	} else if (number === '2' && i != 12) {
+	} else if (remainder === 2 && i != 12) {
 		console.log('My ' + i + 'nd' + ' choice is ' + myArr[i-1]);
-	} else if (number === '3' && i != 13) {
+	} else if (remainder === 3 && i != 13) {
 		console.log('My ' + i + 'rd' + ' choice is ' + myArr[i-1]);
 	} else {
 		console.log('My ' + i + 'th' + ' choice is ' + myArr[i-1]);
