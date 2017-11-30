@@ -47,6 +47,8 @@ var transmogrifier = function(val1, val2, val3) {
 
 console.log(transmogrifier(1,2,3));
 console.log(transmogrifier(4,1,2));
+console.log(transmogrifier(2,2,3));
+
 
 // 4. Write a function `wordReverse` that accepts a single argument, a string. The
 // method should return a string with the order of the words reversed. Don't worry
@@ -60,6 +62,7 @@ var wordReverse = function(string) {
 
 console.log(wordReverse('Hello my name is'));
 console.log(wordReverse('This sentence is reversed'));
+console.log(wordReverse('YO, how is the weather today?'));
 
 
 
