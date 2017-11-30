@@ -29,6 +29,8 @@ var lengths = function(arrayOfStrings) {
 
 console.log(lengths(['abcdddd','def']));
 console.log(lengths(['hello', 'goodbye']));
+console.log(lengths(['wowowowowowowowowowwoow', 'allo']));
+
 
 // 3. Write a Javascript function called `transmogrifier`
 // This function should accept three arguments, which you can assume will be numbers.
