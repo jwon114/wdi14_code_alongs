@@ -55,7 +55,7 @@ function submitClickEvent() {
 		var valid = false;
 
 		if (peopleList.length !== 0) {
-			if ((intRegex.test(groupSize)) && (groupSize <= Math.floor(peopleList.length / 2))) {
+			if ((intRegex.test(groupSize)) && (groupSize <= Math.floor(peopleList.length / 2)) && (groupSize > 0)) {
 				valid = true;
 			}
 		}
@@ -86,7 +86,7 @@ function submitClickEvent() {
 				$('.groups ul').append('<li>' + group + ' (' + group.length + ')</li>');
 			})
 		} else {
-			alert('There must be a list of people generated first. The number of people per group must also be less than half the size of the people list');
+			alert('There must be a list of people generated first. The number of people per group must also be less than half the size of the people list and greater than zero');
 		}
 	})
 }
