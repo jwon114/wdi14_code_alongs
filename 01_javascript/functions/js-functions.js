@@ -9,12 +9,12 @@
 var calculateAge = function(birthYear, currentYear) {
 	var age1 = currentYear - birthYear;
 	var age2 = age1 - 1;
-	return 'You are either ' + age1 + ' or ' + age2;
+	console.log('You are either ' + age1 + ' or ' + age2);
 }
 
-console.log(calculateAge(1990, 2017));
-console.log(calculateAge(1880, 1950));
-console.log(calculateAge(1960, 1970));
+calculateAge(1990, 2017);
+calculateAge(1880, 1950);
+calculateAge(1960, 1970);
 
 
 //  2. Write a function `lengths` that accepts a single parameter as an argument, namely
