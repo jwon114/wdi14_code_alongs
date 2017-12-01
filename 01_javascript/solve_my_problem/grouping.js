@@ -2,7 +2,7 @@ var people = ['Alex', 'James', 'Robbie', 'Anushka', 'Ross', 'Aysa', 'Joanna Phil
 'Chang', 'Johanna Schreiner', 'Sheila', 'Emma', 'Karen',
 'Sherry', 'Ethan', 'Mark', 'Sophie', 'Fouad', 'Mia', 'Vivien', 'Haofu', 'Wally'];
 var scrambled = [];
-var group_size = 6;
+var group_size = 4;
 var valid = false;
 
 // scramble the array of people
@@ -17,36 +17,31 @@ var scrambleArray = function(people) {
 	return newArr
 }
 
-scrambled = scrambleArray(people);
+if (group_size <= people.length) {
 
-var groups = [];
-if (scrambled.length % group_size === 0) {
+	// call the scrambled function to scramble the people
+	scrambled = scrambleArray(people);
+
+	// slice the groups up based on group size
+	var groups = [];
 	for (var i = 0; i < scrambled.length; i+=group_size) {
 		var sub_group = scrambled.slice(i, i + group_size);
 		groups.push(sub_group);
 	}
+
+	// if there are leftovers then redistribute starting from the first group
+	if (scrambled.length % group_size !== 0) {
+		// pop the last sub array and assign to leftovers
+		var leftovers = groups.pop();
+
+		// reassign remaining leftover people to the groups spread as evenly as possible
+		var newGroup = 0;
+		for (var l = 0; l < leftovers.length; l++) {
+			groups[newGroup].push(leftovers[l]);
+			(newGroup < groups.length - 1) ? newGroup++ : newGroup = 0;
+		}
+	}
+	console.log('groups', groups);
 } else {
-	for (var i = 0; i < scrambled.length; i+=group_size) {
-		var sub_group = scrambled.slice(i, i + group_size);
-		groups.push(sub_group);
-	}
-
-	// pop the last sub array and assign to leftovers
-	var leftovers = groups.pop();
-
-	// reassign remaining leftover people to the groups spread as evenly as possible
-	var newGroup = 0;
-	for (var l = 0; l < leftovers.length; l++) {
-		groups[newGroup].push(leftovers[l]);
-		(newGroup < groups.length - 1) ? newGroup++ : newGroup = 0;
-	}
-
-    // for (var l = 0; l < leftovers.length; l++) {
-    //     var randomGroup = Math.floor((Math.random() * groups.length));
-    //     groups[randomGroup].push(leftovers[l]);
-    // }
-
+	console.log('Groups size is greater than the number of people!');
 }
-
-// console.log('scrambled people', scrambled);
-console.log('groups', groups);
