@@ -51,11 +51,11 @@ function submitClickEvent() {
 		var finalArr = []
 		var peopleList = $('.people ol li');
 		var groupSize = parseInt($('.group_number_input').val());
-		var intRegex = /^\d+/;
+		var intRegex = /^[1-9][0-9]*/;
 		var valid = false;
 
 		if (peopleList.length !== 0) {
-			if ((intRegex.test(groupSize)) && (groupSize <= Math.floor(peopleList.length / 2)) && (groupSize > 0)) {
+			if ((intRegex.test(groupSize)) && (groupSize <= Math.floor(peopleList.length / 2))) {
 				valid = true;
 			}
 		}

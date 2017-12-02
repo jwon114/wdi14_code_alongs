@@ -4,46 +4,42 @@
 	<meta charset="UTF-8">
 	<title>Grouping</title>
 	<style>
-		.people_container {
+		.main_container {
 			display: flex;
-			justify-content: left;
+			justify-content: space-between;
 			/*border: 1px solid black;*/
 		}
 		.people {
 			/*border: 1px solid red;*/
 		}
 		.generate_container {
-			position: absolute;
-			left: 25%;
+			/*border: 1px solid green;*/
 		}
 		.how_many_people {
-			margin-top: 50px;
+			/*margin-top: 50px;*/
 		}
 	</style>
 </head>
 <body>
 	<h1>Let's Form Groups!</h1>
-	<div class="people_container">
-		<div>
-			<div class="people">
-				<ol></ol>
-			</div>
+	<div class="main_container">
+		<div class="people">
+			<ol></ol>
 		</div>
 		<div class="generate_container">
-			<input class="generate_number_input" type="text">
+			<input class="generate_number_input" placeholder="Total number of people" type="text">
 			<button class="generate_button">Generate</button>
 		</div>
-	</div>
 
-	<div class="how_many_people">
-		How many people per group?
-		<input class="group_number_input"type="text">
-		<button class="submit_button">Submit</button>
-	</div>
+		<div class="how_many_people">
+			<input class="group_number_input" placeholder="People per group" type="text">
+			<button class="submit_button">Submit</button>
+		</div>
 
-	<div class="groups">
-		<p class="number_of_groups"></p>
-		<ul></ul>
+		<div class="groups">
+			<p class="number_of_groups"></p>
+			<ul></ul>
+		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="grouping.js"></script>
