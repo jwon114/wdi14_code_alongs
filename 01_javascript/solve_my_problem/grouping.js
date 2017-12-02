@@ -36,7 +36,7 @@ function generateClickEvent() {
 			scrambled = scrambled.slice(0, parseInt(generate_input));
 			$('.people ol').empty();
 			$('.groups p').text('');
-			$('.groups ul').empty();
+			$('.groups ol').empty();
 			scrambled.forEach(item => {
 				$('.people ol').append("<li>" + item + "</li>")
 			})
@@ -80,10 +80,10 @@ function submitClickEvent() {
 					(newGroup < groups.length - 1) ? newGroup++ : newGroup = 0;
 				}
 			}
-			$('.groups ul').empty();
+			$('.groups ol').empty();
 			$('.groups p').text(groups.length + ' groups created for ' + peopleList.length + ' people');
 			groups.forEach(group => {
-				$('.groups ul').append('<li>' + group + ' (' + group.length + ')</li>');
+				$('.groups ol').append('<li>' + group + ' (' + group.length + ')</li>');
 			})
 		} else {
 			alert('There must be a list of people generated first. The number of people per group must also be less than half the size of the people list and greater than zero');
