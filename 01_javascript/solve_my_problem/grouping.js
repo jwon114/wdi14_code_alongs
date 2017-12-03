@@ -1,3 +1,9 @@
+// Global Variables (needs to be declared outside of document ready to be accessed)
+var people = ['Alex', 'James', 'Robbie', 'Anushka', 'Ross', 'Aysa', 'Joanna Phillips',
+'Chang', 'Johanna Schreiner', 'Sheila', 'Emma', 'Karen','Sherry', 'Ethan', 'Mark', 
+'Sophie', 'Fouad', 'Mia', 'Vivien', 'Haofu', 'Wally'];
+
+
 $(document).ready(function() {
 	$('.generate_button').prop('disabled', true);
 	generateInputEvent();
@@ -8,10 +14,12 @@ $(document).ready(function() {
 // scramble the array of people
 var scrambleArray = function(people) {
 	var newArr = [];
-	while (people.length > 0) {
-		var random = Math.floor((Math.random() * people.length));
-		newArr.push(people[random]);
-		people.splice(random,1);
+	// copy input array to new array and preserve original (people)
+	var peopleArr = people.slice();
+	while (peopleArr.length > 0) {
+		var random = Math.floor((Math.random() * peopleArr.length));
+		newArr.push(peopleArr[random]);
+		peopleArr.splice(random, 1);
 	}
 	return newArr
 }
@@ -24,16 +32,13 @@ function generateInputEvent() {
 
 function generateClickEvent() {
 	$('.generate_button').on('click', function() {
-		var generate_input = $('.generate_number_input').val();
+		var generate_input = parseInt($('.generate_number_input').val());
 		var intRegex = /^\d+$/;
-		var people = ['Alex', 'James', 'Robbie', 'Anushka', 'Ross', 'Aysa', 'Joanna Phillips',
-		'Chang', 'Johanna Schreiner', 'Sheila', 'Emma', 'Karen','Sherry', 'Ethan', 'Mark', 
-		'Sophie', 'Fouad', 'Mia', 'Vivien', 'Haofu', 'Wally'];
 
 		if ((intRegex.test(generate_input)) && (generate_input <= people.length)) {
 			var scrambled = [];
 			scrambled = scrambleArray(people);
-			scrambled = scrambled.slice(0, parseInt(generate_input));
+			scrambled = scrambled.slice(0, generate_input);
 			$('.people ol').empty();
 			$('.groups p').text('');
 			$('.groups ol').empty();
@@ -52,15 +57,8 @@ function submitClickEvent() {
 		var peopleList = $('.people ol li');
 		var groupSize = parseInt($('.group_number_input').val());
 		var intRegex = /^[1-9][0-9]*/;
-		var valid = false;
 
-		if (peopleList.length !== 0) {
-			if ((intRegex.test(groupSize)) && (groupSize <= Math.floor(peopleList.length / 2))) {
-				valid = true;
-			}
-		}
-
-		if (valid) {
+		if ((peopleList.length !== 0) && (intRegex.test(groupSize)) && (groupSize <= Math.floor(peopleList.length / 2))) {
 			peopleList.each(function() { finalArr.push($(this).text()) });
 			// slice the groups up based on group size
 			var groups = [];
