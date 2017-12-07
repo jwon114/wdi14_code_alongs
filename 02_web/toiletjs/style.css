@@ -1,0 +1,134 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: mistyrose;
+}
+
+.tank {
+	width: 340px;
+	height: 200px;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.lid_container {
+	width: 340px;
+	display: flex;
+	justify-content: center;
+}
+
+.lid {
+	height: 20px;
+	width: 100%;
+	border-radius: 5px;
+	border-bottom: 1px solid black;
+	background-color: white;
+}
+
+.flush {
+	border: 1px solid black;
+	height: 50px;
+	width: 150px;
+	box-shadow: 0 7px black;
+	border-radius: 10px;
+	transition: .1s;
+}
+
+.flush_down {
+	box-shadow: 0 1px black;
+}
+
+.bowl_container {
+	height: 340px;
+	width: 340px;
+	background-color: mintcream;
+	border: 60px solid white;
+	border-radius: 20% 20% 40% 40%;
+	box-shadow: inset 0 0 20px #e3d3d3;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.bowl {
+	box-shadow: inset 0 0 20px #e3d3d3;
+	height: 100%;
+	width: 100%;
+	border-radius: 0 0 35% 35%;
+}
+
+
+.hole {
+	height: 100px;
+	width: 100px;
+	background-color: lightblue;
+	border-radius: 20% 20% 40% 40%;
+	box-shadow: inset 0 0 20px #e3d3d3;
+	position: absolute;
+	top: 5%;
+}
+
+.poop {
+	background-color: darkolivegreen;
+	box-shadow: none;
+	border-radius: 70% 70% 80% 80%;
+	height: 100%;
+	width: 100%;
+}
+
+.poop_swirl {
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-name: poop_spin;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes poop_spin {
+    from { 
+		-webkit-transform: rotate(0deg);
+		background-color: darkolivegreen;
+		border-radius: 70% 70% 80% 80%;
+		height: 100%;
+		width: 100%;
+    }
+    to { 
+    	-webkit-transform: rotate(360deg); 
+    	background-color: lightblue;
+    	border-radius: 50% 50% 50% 50%;
+    	height: 50%;
+    	width: 50%;
+    }
+}
+
+.swirl {
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-name: spin;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes spin {
+    from { 
+		-webkit-transform: rotate(0deg);
+		background-color: lightblue;
+		border-radius: 70% 70% 80% 80%;
+		height: 100%;
+		width: 100%;
+    }
+    to { 
+    	-webkit-transform: rotate(360deg); 
+    	background-color: lightblue;
+    	border-radius: 50% 50% 50% 50%;
+    	height: 50%;
+    	width: 50%;
+    }
+}
+

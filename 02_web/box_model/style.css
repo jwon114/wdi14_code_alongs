@@ -1,0 +1,16 @@
+
+* {
+	/*box-sizing: border-box;*/
+}
+.old {
+	width: 300px;
+	padding: 100px;
+	border: 1px solid black;
+}
+
+.new {
+	box-sizing: border-box;
+	width: 300px;
+	padding: 100px;
+	border: 1px solid black;	
+}

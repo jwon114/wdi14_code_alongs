@@ -1,0 +1,13 @@
+img {
+	float: right;
+}
+
+.one {
+	float: left;
+	width: 60%;
+}
+
+.two {
+	float: left;
+	width: 40%;
+}
