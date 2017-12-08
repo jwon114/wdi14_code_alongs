@@ -24,7 +24,7 @@ function flushBowl() {
 	flush.classList.add('flush_down');
 	setTimeout(function() {
 		flush.classList.remove('flush_down');
-	}, 1000)
+	}, 500)
 	
 	setTimeout(function() {
 		bowl.classList.remove('poop_swirl');

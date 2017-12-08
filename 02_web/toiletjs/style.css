@@ -60,7 +60,7 @@ body {
 	box-shadow: inset 0 0 20px #e3d3d3;
 	height: 100%;
 	width: 100%;
-	border-radius: 0 0 35% 35%;
+	border-radius: 5% 5% 35% 35%;
 }
 
 
@@ -78,8 +78,8 @@ body {
 	background-color: darkolivegreen;
 	box-shadow: none;
 	border-radius: 70% 70% 80% 80%;
-	height: 100%;
-	width: 100%;
+	height: 80%;
+	width: 80%;
 }
 
 .poop_swirl {
@@ -95,8 +95,8 @@ body {
 		-webkit-transform: rotate(0deg);
 		background-color: darkolivegreen;
 		border-radius: 70% 70% 80% 80%;
-		height: 100%;
-		width: 100%;
+		height: 80%;
+		width: 80%;
     }
     to { 
     	-webkit-transform: rotate(360deg); 
@@ -126,7 +126,7 @@ body {
     to { 
     	-webkit-transform: rotate(360deg); 
     	background-color: lightblue;
-    	border-radius: 50% 50% 50% 50%;
+    	border-radius: 70% 70% 50% 50%;
     	height: 50%;
     	width: 50%;
     }
