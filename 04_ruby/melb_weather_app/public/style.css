@@ -1,0 +1,21 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: mistyrose;
+}
+
+.weather_wrapper {
+	font-family: 'Arial', sans-serif;
+	font-size: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.weather_wrapper .temperature {
+	margin-top: 40px;
+}

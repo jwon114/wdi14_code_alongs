@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<div>
+		<form action="/" id="form1">
+			<input placeholder="city" type="text" name="city">
+			<button type="submit" form="form1">Submit</button>
+		</form>
+	</div>
+	<div class="weather_wrapper">
+		<div><%= @title %></div>
+		<div class="temperature"><%= @temperature %>&deg;C</div>
+	</div>
+</body>
+</html>
