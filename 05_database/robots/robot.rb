@@ -62,7 +62,7 @@
 class Robot
 	def initialize
 		@name = Array.new(2) { Array("A".."Z").sample }.join + Array.new(3) { Array("0".."9").sample }.join
-		address = Array.new(12) { (Array("a".."z") + Array("0".."9")).sample}.each_slice(2).to_a
+		address = Array.new(12) { (Array("a".."f") + Array("0".."9")).sample}.each_slice(2).to_a
 		@mac_address = address.map { |a,b| a+b }.join(":")
 		@instruction_count = 0
 		@creation_time = Time.now
@@ -92,9 +92,9 @@ class Robot
 
 	def timers
 		if @boot_time > 0
-			"#{Time.now - @boot_time} seconds since last boot, #{Time.now - @creation_time} seconds since creation"
+			"#{(Time.now - @boot_time).round} seconds since last boot, #{(Time.now - @creation_time).round} seconds since creation"
 		else
-			"#{Time.now - @creation_time} seconds since creation"
+			"#{(Time.now - @creation_time).round} seconds since creation"
 		end
 	end
 end
