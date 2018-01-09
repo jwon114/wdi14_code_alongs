@@ -61,12 +61,21 @@
 
 class Robot
 	def initialize
-		@name = Array.new(2) { Array("A".."Z").sample }.join + Array.new(3) { Array("0".."9").sample }.join
+		# @name = Array.new(2) { Array("A".."Z").sample }.join + Array.new(3) { Array("0".."9").sample }.join
+		@name = "#{prefix}#{suffix}" #another method of creating a 2 letter, 3 number random string
 		address = Array.new(12) { (Array("a".."f") + Array("0".."9")).sample}.each_slice(2).to_a
 		@mac_address = address.map { |a,b| a+b }.join(":")
 		@instruction_count = 0
 		@creation_time = Time.now
 		@boot_time = 0
+	end
+
+	def prefix
+		return Array("AA".."ZZ").sample
+	end
+
+	def suffix
+		return Array("000".."999").sample
 	end
 
 	def name
@@ -80,7 +89,8 @@ class Robot
 	end
 
 	def reset
-		@name = Array.new(2) { Array("A".."Z").sample }.join + Array.new(3) { Array("0".."9").sample }.join
+		# @name = Array.new(2) { Array("A".."Z").sample }.join + Array.new(3) { Array("0".."9").sample }.join
+		@name = "#{prefix}#{suffix}"
 		@instruction_count = @instruction_count + 1
 		@boot_time = Time.now
 		"Resetting to factory settings"
@@ -91,7 +101,7 @@ class Robot
 	end
 
 	def timers
-		if @boot_time > 0
+		if @boot_time != 0
 			"#{(Time.now - @boot_time).round} seconds since last boot, #{(Time.now - @creation_time).round} seconds since creation"
 		else
 			"#{(Time.now - @creation_time).round} seconds since creation"
