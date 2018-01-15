@@ -1,0 +1,7 @@
+<h2><%= @dish.name %></h2>
+<img src="<%= @dish.image_url %>" alt="">
+
+<form action="/dishes/<%= @dish.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<button>delete</button>
+</form>
