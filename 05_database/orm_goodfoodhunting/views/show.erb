@@ -5,3 +5,18 @@
 	<input type="hidden" name="_method" value="delete">
 	<button>delete</button>
 </form>
+
+<a href="/dishes/<%= @dish.id %>/edit">
+	<button>edit</button>
+</a>
+
+<% @comments.each do |comment| %>
+	<hr>
+	<p><%= comment.body %></p>
+<% end %>
+
+<form action="/comments" method="post">
+	<input type="hidden" name="dish_id" value="<%= @dish.id %>">
+	<textarea type="text" name="comment" cols="30" rows="10"></textarea>
+	<button>comment</button>
+</form>

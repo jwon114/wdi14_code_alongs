@@ -1,0 +1,12 @@
+<h1>Good Food Hunting</h1>
+
+<form action="/dishes/new">
+	<button>new dish</button>
+</form>
+
+<% @dishes.each do |dish|%>
+	<a href="/dishes/<%= dish.id %>">
+		<p><%= dish.name %></p>
+		<img src="<%= dish.image_url %>" alt="">
+	</a>
+<% end %>

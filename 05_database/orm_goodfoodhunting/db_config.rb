@@ -1,4 +1,4 @@
-require 'pg' # need to use version 0.21.0, doesn't work with 1.0.0
+# require 'pg' # need to use version 0.21.0, doesn't work with 1.0.0
 # settings for activerecord
 require 'active_record'
 

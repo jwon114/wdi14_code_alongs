@@ -1,0 +1,8 @@
+<div>
+	<% if @dish %>
+		<p><%= @dish.name %></p>
+		<img src="<%= @dish.image_url %>" alt="">
+	<% else %>
+		<h1><%= @error %></h1>
+	<% end %>
+</div>
