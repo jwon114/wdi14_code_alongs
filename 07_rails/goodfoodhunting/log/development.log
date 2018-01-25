@@ -1927,3 +1927,519 @@ Processing by DishesController#show as HTML
 Completed 200 OK in 67ms (Views: 56.5ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/rails/info" for 127.0.0.1 at 2018-01-22 18:21:33 +1100
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:10:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/rails/info" for 127.0.0.1 at 2018-01-22 18:21:39 +1100
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 26ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-01-22 18:21:39 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (14.7ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-01-22 18:21:50 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [14 times] (7.4ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:27:14 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (4.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (102.3ms)
+Completed 200 OK in 222ms (Views: 130.3ms | ActiveRecord: 77.8ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:45:19 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (34.5ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 338ms (Views: 161.5ms | ActiveRecord: 34.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:45:45 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (16.8ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (129.1ms)
+Completed 200 OK in 203ms (Views: 80.6ms | ActiveRecord: 111.6ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:45:47 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (2.8ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 67ms (Views: 44.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:48:56 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (2.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 68ms (Views: 52.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:53:05 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (0.7ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 87ms (Views: 51.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/dishes" for 127.0.0.1 at 2018-01-22 18:53:12 +1100
+Processing by DishesController#create as HTML
+  Parameters: {"new_name"=>"ice cream", "new_image_url"=>"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/220px-Ice_Cream_dessert_02.jpg", "id"=>"1", "authenticity_token"=>"rJLQhhz1dFO6ixuJrE85iLd9il5HYW3L8R42t9Lw1fyw9s0vSwEOb9TIYeD6qdlsMvRaKa44FrD2kTR52HC1cQ=="}
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (35.5ms)[0m  [1m[32mINSERT INTO "dishes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2018-01-22 07:53:12.417639"], ["updated_at", "2018-01-22 07:53:12.417639"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 79ms (ActiveRecord: 42.0ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:53:12 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (4.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 43ms (Views: 35.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:53:15 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (2.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 96ms (Views: 89.2ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mDish Load (1.0ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[36mDish Load (0.7ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.8ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[33mUPDATE "dishes" SET "name" = $1, "updated_at" = $2 WHERE "dishes"."id" = $3[0m  [["name", "ice-cream"], ["updated_at", "2018-01-22 07:56:45.226227"], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "dishes" SET "name" = $1, "updated_at" = $2 WHERE "dishes"."id" = $3[0m  [["name", "pudding"], ["updated_at", "2018-01-22 07:57:05.234158"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/dishes" for 127.0.0.1 at 2018-01-22 18:57:38 +1100
+Processing by DishesController#create as HTML
+  Parameters: {"new_name"=>"ice cream", "new_image_url"=>"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/220px-Ice_Cream_dessert_02.jpg", "id"=>"1", "authenticity_token"=>"2htz6QKpv4z1QYpGdG4ezeDMNbHCz7UCiNYltrk3g0TGf25AVV3FsJsC8C8iiP4pZUXlxiuWznmPWSd4s7fjyQ=="}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "dishes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2018-01-22 07:57:38.892101"], ["updated_at", "2018-01-22 07:57:38.892101"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 62ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:57:38 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (2.7ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 77ms (Views: 70.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:57:42 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (2.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 52ms (Views: 41.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:57:45 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (3.4ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 57ms (Views: 46.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:57:47 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.7ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:57:48 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.7ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:57:52 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 107ms (Views: 98.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:58:20 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 67ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/dishes" for 127.0.0.1 at 2018-01-22 18:58:25 +1100
+Processing by DishesController#create as HTML
+  Parameters: {"new_name"=>"ice cream", "new_image_url"=>"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/220px-Ice_Cream_dessert_02.jpg", "id"=>"1", "authenticity_token"=>"IETOGv9lbHSWl2NH1t03GiZa9cgmiN8NqcigbPi12U48INOzqJEWSPjUGS6AO9f+o9Mlv8/RpHauR6Ki8jW5ww=="}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[32mINSERT INTO "dishes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2018-01-22 07:58:25.755990"], ["updated_at", "2018-01-22 07:58:25.755990"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 19ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:58:25 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:58:56 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (2.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 91ms (Views: 42.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/dishes" for 127.0.0.1 at 2018-01-22 18:59:00 +1100
+Processing by DishesController#create as HTML
+  Parameters: {"new_name"=>"ice cream", "new_image_url"=>"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/220px-Ice_Cream_dessert_02.jpg", "id"=>"1", "authenticity_token"=>"QUzmPsbtQ7bpkIu9K5JBQt57VYAGlNNNb5L4p0i8ONJdKPuXkRk5iofT8dR9dKGmW/KF9+/NqDZoHfppQjxYXw=="}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "dishes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2018-01-22 07:59:00.206934"], ["updated_at", "2018-01-22 07:59:00.206934"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 9ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:59:00 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.9ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:59:02 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (2.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 52ms (Views: 44.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:59:17 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 89ms (Views: 46.8ms | ActiveRecord: 16.7ms)
+
+
+Started PUT "/dishes" for 127.0.0.1 at 2018-01-22 18:59:22 +1100
+Processing by DishesController#update as HTML
+  Parameters: {"new_name"=>"ice cream", "new_image_url"=>"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/220px-Ice_Cream_dessert_02.jpg", "id"=>"1", "authenticity_token"=>"M3SyQ/bUVl8uR8E/rRwz6R5DtGpmvzNVgPI0xmzWd7YvEK/qoSAsY0AEu1b7+tMNm8pkHY/mSC6HfTYIZlYXOw=="}
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.7ms)[0m  [1m[33mUPDATE "dishes" SET "name" = $1, "image_url" = $2, "updated_at" = $3 WHERE "dishes"."id" = $4[0m  [["name", "ice cream"], ["image_url", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/220px-Ice_Cream_dessert_02.jpg"], ["updated_at", "2018-01-22 07:59:23.054566"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 165ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 18:59:23 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 18:59:27 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 31.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-22 19:29:29 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (1.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 134ms (Views: 96.5ms | ActiveRecord: 1.3ms)
+
+
+  [1m[36mDish Load (2.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 17]]
+  [1m[35mSQL (8.9ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 16]]
+  [1m[35mSQL (8.9ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 15]]
+  [1m[35mSQL (9.4ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 14]]
+  [1m[35mSQL (8.9ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 13]]
+  [1m[36mDish Load (0.7ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 19:30:43 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (1.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 136ms (Views: 116.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dishes/new" for 127.0.0.1 at 2018-01-22 19:30:53 +1100
+Processing by DishesController#new as HTML
+  Rendering dishes/new.html.erb within layouts/application
+  Rendered dishes/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 96ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dishes" for 127.0.0.1 at 2018-01-22 19:31:24 +1100
+Processing by DishesController#create as HTML
+  Parameters: {"authenticity_token"=>"F3ZP88SMgAQco1bBFnjip4f1MEv/kFueGaTRLSPRtLwLElJak3j6OHLgLKhAngJDAnzgPBbJIOUeK9PjKVHUMQ==", "dish_name"=>"pudding", "image_url"=>"https://www.justonecookbook.com/wp-content/uploads/2016/09/Japanese-Pudding-II-600x900.jpg"}
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.8ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "pudding"], ["image_url", "https://www.justonecookbook.com/wp-content/uploads/2016/09/Japanese-Pudding-II-600x900.jpg"], ["created_at", "2018-01-22 08:31:24.845307"], ["updated_at", "2018-01-22 08:31:24.845307"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 82ms (ActiveRecord: 33.1ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 19:31:24 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (2.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 92ms (Views: 83.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dishes/18" for 127.0.0.1 at 2018-01-22 19:31:26 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mDish Load (6.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 107ms (Views: 89.7ms | ActiveRecord: 6.3ms)
+
+
+Started PUT "/dishes" for 127.0.0.1 at 2018-01-22 19:31:33 +1100
+Processing by DishesController#update as HTML
+  Parameters: {"new_name"=>"super pudding", "new_image_url"=>"", "id"=>"18", "authenticity_token"=>"pTSo3fG2KIfECHONNehvcRqmnd4hhgUWniXtRqD6V7i5ULV0pkJSu6pLCeRjDo+Vny9Nqcjffm2Zqu+Iqno3NQ=="}
+  [1m[36mDish Load (2.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.5ms)[0m  [1m[33mUPDATE "dishes" SET "name" = $1, "image_url" = $2, "updated_at" = $3 WHERE "dishes"."id" = $4[0m  [["name", "super pudding"], ["image_url", ""], ["updated_at", "2018-01-22 08:31:33.653031"], ["id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 121ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 19:31:33 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes/18" for 127.0.0.1 at 2018-01-22 19:31:36 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/dishes" for 127.0.0.1 at 2018-01-22 19:31:42 +1100
+Processing by DishesController#update as HTML
+  Parameters: {"new_name"=>"super pudding", "new_image_url"=>"https://www.justonecookbook.com/wp-content/uploads/2016/09/Japanese-Pudding-II-600x900.jpg", "id"=>"18", "authenticity_token"=>"2to5aCyMibXl/AMwUwfVwekqGAAq3alu5B0BmKZVqR/GviTBe3jziYu/eVkF4TUlbKPId8OE0hXjkgNWrNXJkg=="}
+  [1m[36mDish Load (0.7ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[33mUPDATE "dishes" SET "image_url" = $1, "updated_at" = $2 WHERE "dishes"."id" = $3[0m  [["image_url", "https://www.justonecookbook.com/wp-content/uploads/2016/09/Japanese-Pudding-II-600x900.jpg"], ["updated_at", "2018-01-22 08:31:56.941924"], ["id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 14625ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 19:31:56 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-22 19:32:06 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 107ms (Views: 44.1ms | ActiveRecord: 56.3ms)
+
+
+Started GET "/rails/info" for 127.0.0.1 at 2018-01-23 11:37:08 +1100
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 317ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-01-23 11:37:09 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [7 times] (337.0ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (183.5ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (860.8ms)
+Completed 200 OK in 1116ms (Views: 981.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-01-23 11:37:28 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (540.3ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.1ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (632.1ms)
+Completed 200 OK in 685ms (Views: 665.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-01-23 11:40:36 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (72.0ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.1ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (104.9ms)
+Completed 200 OK in 139ms (Views: 128.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-01-23 11:46:14 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (56.5ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.8ms)
+  Rendered /Users/James/.rvm/gems/ruby-2.4.3/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (108.4ms)
+Completed 200 OK in 155ms (Views: 133.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-23 11:54:24 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (36.7ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (296.1ms)
+Completed 200 OK in 612ms (Views: 367.9ms | ActiveRecord: 139.8ms)
+
+
+Started GET "/dishes/1" for 127.0.0.1 at 2018-01-23 11:54:30 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (4.5ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 129ms (Views: 93.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/dishes/18" for 127.0.0.1 at 2018-01-23 11:54:39 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mDish Load (2.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 128ms (Views: 93.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dishes/new" for 127.0.0.1 at 2018-01-23 11:55:26 +1100
+Processing by DishesController#new as HTML
+  Rendering dishes/new.html.erb within layouts/application
+  Rendered dishes/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dishes" for 127.0.0.1 at 2018-01-23 11:55:30 +1100
+Processing by DishesController#create as HTML
+  Parameters: {"authenticity_token"=>"gaBq4C+8jPajIzGGQgNhghyMlgyVagIuVzrIXmw4s8qdxHdJeEj2ys1gS+8U5YFmmQVGe3wzeVVQtcqQZrjTRw==", "dish_name"=>"test", "image_url"=>""}
+  [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (29.0ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "test"], ["image_url", ""], ["created_at", "2018-01-23 00:55:30.230201"], ["updated_at", "2018-01-23 00:55:30.230201"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 70ms (ActiveRecord: 36.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-23 11:55:30 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.7ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 58ms (Views: 51.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dishes/19" for 127.0.0.1 at 2018-01-23 11:55:32 +1100
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mDish Load (2.0ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 44.2ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/dishes/19" for 127.0.0.1 at 2018-01-23 11:55:33 +1100
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KtWFmINU/SZ4M1nazIFCaS7f5f4kN0wKqT+fcI/bzd42sZgx1KCHGhZwI7OaZ6KNq1Y1ic1uN3GusJ2+hVutUw==", "id"=>"19"}
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 25ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-01-23 11:55:33 +1100
+Processing by DishesController#index as HTML
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (2.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 2.4ms)
+
+

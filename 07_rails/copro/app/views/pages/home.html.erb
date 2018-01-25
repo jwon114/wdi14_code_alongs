@@ -1,0 +1,23 @@
+<% if logged_in? %>
+	<form action="/session" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<button>logout</button>
+	</form>
+<% else %>
+	<a href="/login">
+		<button>login</button>
+	</a>
+<% end %>
+
+<div class="container">
+	<% @projects.each do |project| %>
+		<div class="project">
+			<p>Submitted by</p>
+			<p><%= project.user.email %></p>
+			<a href="/projects/<%= project.id %>">
+				<img src="<%= project.preview.url %>" alt="">
+			</a>
+		</div>
+	<% end %>
+</div>

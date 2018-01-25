@@ -1,0 +1,22 @@
+<div class="project_details">
+	<h1><%= @project.title %></h1>
+	<img src="<%= @project.preview %>" alt="">
+	<% if logged_in? %>
+		<form action="/comments" method="post">
+			<textarea name="comment_text" id="" cols="30" rows="10" placeholder="Comments"></textarea>
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<input type="hidden" name="project_id" value="<%= @project.id %>">
+			<button>Submit</button>
+		</form>
+	<% end %>
+	<% if @comments %>
+		<ul>
+			<% @comments.each do |comment| %>
+				<li>
+					<span><%= comment.body %></span>	
+					<span><%= comment.user.email %></span>	
+				</li>
+			<% end %>
+		</ul>
+	<% end %>
+</div>

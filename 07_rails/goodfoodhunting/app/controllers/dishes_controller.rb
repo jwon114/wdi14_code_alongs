@@ -24,4 +24,22 @@ class DishesController < ApplicationController
 		# render :show # dont have to to have this as it has the same name in the views file
 	end
 
+	def update
+		dish = Dish.find(params[:id])
+		dish.name = params[:new_name]
+		dish.image_url = params[:new_image_url]
+		dish.save
+
+		redirect_to '/dishes'
+	end
+
+	def destroy
+		@dish = Dish.find(params[:id])
+		if @dish.destroy
+			redirect_to '/dishes'
+		else
+			render :show
+		end
+	end
+
 end

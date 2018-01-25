@@ -1,0 +1,16 @@
+<form action="/session" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label for="">Email</label>
+	<input name="email" type="text">
+	<label for="">Password</label>
+	<input name="password" type="password">
+	<button>Login</button>
+</form>
+
+<a href="/users/new">
+	<button>Create New User</button>
+</a>
+
+<% if @error %>
+	<h1><%= @error %></h1>
+<% end %>

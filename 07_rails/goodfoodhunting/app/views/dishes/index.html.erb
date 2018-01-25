@@ -5,8 +5,8 @@
 </form>
 
 <% @dishes.each do |dish|%>
-	<a href="/dishes/<%= dish.id %>">
+	<a class="index_dish" href="/dishes/<%= dish.id %>">
 		<p><%= dish.name %></p>
-		<img src="<%= dish.image_url %>" alt="">
+		<img class="dish_image" src="<%= dish.image_url %>" alt="">
 	</a>
 <% end %>

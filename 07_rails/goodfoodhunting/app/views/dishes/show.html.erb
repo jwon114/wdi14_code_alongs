@@ -1,7 +1,22 @@
 <div>
 	<% if @dish %>
 		<p><%= @dish.name %></p>
-		<img src="<%= @dish.image_url %>" alt="">
+		<img class="dish_image" src="<%= @dish.image_url %>" alt="">
+		<form action="/dishes" method="post">
+			<label for="">New Name</label>
+			<input type="text" name="new_name">
+			<label for="">New Image URL</label>
+			<input type="text" name="new_image_url">
+			<input type="hidden" name="id" value="<%= @dish.id %>">
+			<input type="hidden" name="_method" value="put">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<button>Update</button>
+		</form>
+		<form action="/dishes/<%= @dish.id %>" method="post">
+			<input type="hidden" name="_method" value="delete">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<button>Delete</button>
+		</form>
 	<% else %>
 		<h1><%= @error %></h1>
 	<% end %>

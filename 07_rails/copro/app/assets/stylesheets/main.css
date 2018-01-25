@@ -1,0 +1,34 @@
+label, input {
+	display: block;
+}
+
+.container {
+	/*display: flex;*/
+	/*flex-wrap: wrap;*/
+}
+
+.project {
+	width: 50%;
+	float: left;
+}
+
+.project img {
+	/* removes the space between the images */
+	display: block;
+}
+
+@media (min-width: 600px) {
+	.project {
+		width: 33.333%;
+	}
+}
+
+@media (min-width: 1000px) {
+	.project {
+		width: 25%;
+	}
+} 
+
+.project_details img {
+	width: 200px;
+}
