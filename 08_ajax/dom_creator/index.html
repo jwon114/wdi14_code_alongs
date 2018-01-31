@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom Element Creation</title>
+</head>
+<body>
+	<input type="text">
+	<button>add</button>
+	<div class="container">
+		
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+		console.log('ready to go');
+		var languages = ['ruby', 'javascript', 'golang'];
+		var container = document.querySelector('.container');
+		var addBtn = document.querySelector('button');
+		var input = document.querySelector('input');
+		
+		languages.forEach(function(lang) {
+			container.appendChild(createNewElement(lang))
+		})
+
+		addBtn.addEventListener('click', function() {
+			if (input.value !== '') {
+				container.appendChild(createNewElement(input.value));
+				input.value = '';
+			}
+		})
+
+		function createNewElement(lang) {
+			var newElement = document.createElement('p');
+			newElement.textContent = lang;
+			newElement.addEventListener('click', function(event) {
+				console.log(event.target.textContent + ' removed');
+				event.target.remove();
+			})
+			return newElement;
+		}
+
+		// var $container = $('.container');
+		// languages.forEach(function(lang) {
+		// 	$newPara = $('<p>').text(lang); // jQuery version
+		// 	$container.append($newPara);
+		// })
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+
+.container {
+	display: flex;
+
+}
+
+.movie {
+	width: 23%;
+	padding: 0 20px;
+}
+
+p {
+	background-color: mistyrose;
+}
+
+.title {
+	display: inline-block;
+}
+
+.year {
+	display: inline-block;
+}
+
+.movie-poster {
+
+}

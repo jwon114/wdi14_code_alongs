@@ -3,13 +3,30 @@ label, input {
 }
 
 .container {
-	/*display: flex;*/
-	/*flex-wrap: wrap;*/
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.wrapper {
+	width: 300px;
+	position: relative;
+}
+
+.wrapper span {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 30px;
 }
 
 .project {
 	width: 50%;
-	float: left;
+	/*float: left;*/
+	background-color: mistyrose;
+}
+
+.project h2 {
+	display: none;
 }
 
 .project img {
@@ -17,9 +34,17 @@ label, input {
 	display: block;
 }
 
-@media (min-width: 600px) {
+.like-button {
+	cursor: pointer;
+}
+
+@media (min-width: 700px) {
 	.project {
 		width: 33.333%;
+	}
+
+	.project h2 {
+		display: block;
 	}
 }
 
@@ -28,7 +53,3 @@ label, input {
 		width: 25%;
 	}
 } 
-
-.project_details img {
-	width: 200px;
-}

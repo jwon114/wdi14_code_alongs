@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container {
+			padding: 20px;
+		}
+
+		p {
+			background-color: lavenderblush;
+		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="text"><button>Add</button>
+	<div class="container">
+		<p>alex</p>
+		<p>robbie</p>
+		<p>fouad</p>
+	</div>
+	<script>
+
+		// JS
+		// var container = document.querySelector('.container');
+		// container.addEventListener('click', function(e) {
+		// 	if (e.target.tagName === "P") {
+		// 		console.log('clicked')
+		// 		e.target.remove();
+		// 	}
+		// });
+
+		// var addBtn = document.querySelector('button');
+		// addBtn.addEventListener('click', function() {
+		// 	var newChildName = document.querySelector('input').value;
+		// 	var newChild = document.createElement('p');
+		// 	newChild.textContent = newChildName;
+		// 	container.appendChild(newChild);
+		// });
+		
+		// JQUERY
+		var $container = $('.container');
+		$container.on('click', 'p', function(e) {
+			// if (e.target.tagName === "P") { // adding 'p' after the click filters on the child elements, can be CSS selectors too
+				e.target.remove();
+			// }
+		})
+
+		$('button').on('click', function() {
+			if ($('input').val() !== '') {
+				// my way
+				// $container.append("<p>" + $('input').val() + "</p>");
+				// DT's way
+				var newChildName = $('input').val();
+				var newChild = $('<p>').text(newChildName);
+				$container.append(newChild);
+
+				$('input').val('');
+			}
+		})
+	</script>
+</body>
+</html>
