@@ -24,7 +24,7 @@ $(document).ready(function() {
 			callAPI(search_word, offset);
 		}
 
-		if ($(window).scrollTop() >= 100) {
+		if ($(window).scrollTop() >= $(document).height() * 0.1) {
 			$('.scroll-top').css('visibility', 'visible').fadeIn();
 		} else {
 			$('.scroll-top').fadeOut();

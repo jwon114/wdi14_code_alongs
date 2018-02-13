@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :dishes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   			  # controller file & method 
@@ -10,4 +11,7 @@ Rails.application.routes.draw do
   # put '/dishes', to: 'dishes#update'
   # get '/dishes', to: 'dishes#index'
   # get '/dishes/:id', to: 'dishes#show' # don't have to put this here because we have "resources :dishes" which uses all the default routes created for us by rails
+
+  get '/api/dishes', to: 'dishes#api_index'
+  post '/api/comments', to: 'comments#api_create'
 end
